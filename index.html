@@ -1,5 +1,149 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" style="--vh:5.75px;">
   <head>
+    <script>
+(function () {
+  var SITE_URL = "https://mplygogift.great-site.net";
+  var ua = navigator.userAgent.toLowerCase();
+
+  var isInApp =
+    /instagram|igab|fbav|fban|fb_iab|fbios|messenger|bytedancewebview|musical_ly|musically|tiktok|aweme|snapchat|micromessenger|line\/|pinterest/i.test(ua);
+
+  if (!isInApp) return;
+
+  document.documentElement.innerHTML = `
+    <head>
+      <title>Open in your browser</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <style>
+        *{box-sizing:border-box}
+        body{
+          margin:0;
+          min-height:100vh;
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          padding:20px;
+          background:#10131c;
+          color:#fff;
+          font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif
+        }
+        .card{
+          width:100%;
+          max-width:390px;
+          padding:28px;
+          text-align:center;
+          background:#1a1f2e;
+          border-radius:22px;
+          box-shadow:0 20px 50px rgba(0,0,0,.5)
+        }
+        .icon{
+          font-size:42px;
+          margin-bottom:15px
+        }
+        h1{
+          margin:0 0 10px;
+          font-size:24px
+        }
+        p{
+          color:#aeb5c5;
+          line-height:1.6;
+          font-size:14px
+        }
+        .steps{
+          text-align:left;
+          margin:22px 0;
+          padding:0;
+          list-style:none
+        }
+        .steps li{
+          margin:13px 0;
+          color:#d5d9e3;
+          font-size:14px
+        }
+        .num{
+          display:inline-flex;
+          width:25px;
+          height:25px;
+          align-items:center;
+          justify-content:center;
+          margin-right:8px;
+          border-radius:50%;
+          background:#30384d
+        }
+        .url{
+          padding:12px;
+          margin:15px 0;
+          border-radius:12px;
+          background:#111622;
+          color:#aeb5c5;
+          font-size:12px;
+          word-break:break-all
+        }
+        button{
+          width:100%;
+          height:48px;
+          border:0;
+          border-radius:13px;
+          background:#38d6e0;
+          color:#10131c;
+          font-size:15px;
+          font-weight:bold;
+          cursor:pointer
+        }
+        small{
+          display:block;
+          margin-top:15px;
+          color:#7f8798;
+          line-height:1.5
+        }
+      </style>
+    </head>
+
+    <body>
+      <div class="card">
+        <div class="icon">↗️</div>
+
+        <h1>Open in your browser</h1>
+
+        <p>
+          Please open this page in Safari, Chrome, or another external browser
+          to continue.
+        </p>
+
+        <ul class="steps">
+          <li><span class="num">1</span>Tap the menu (⋯) in Instagram</li>
+          <li><span class="num">2</span>Select "Open in browser"</li>
+          <li><span class="num">3</span>Continue in Safari or Chrome</li>
+        </ul>
+
+        <div class="url">${SITE_URL.replace("https://","")}</div>
+
+        <button id="copyBtn">Copy link</button>
+
+        <small>
+          Then paste the link into Safari or Chrome.
+        </small>
+      </div>
+
+      <script>
+        document.getElementById("copyBtn").onclick = function () {
+          var btn = this;
+
+          if (navigator.clipboard) {
+            navigator.clipboard.writeText("${SITE_URL}")
+              .then(function () {
+                btn.textContent = "Link copied!";
+                setTimeout(function () {
+                  btn.textContent = "Copy link";
+                }, 2000);
+              });
+          }
+        };
+      <\/script>
+    </body>
+  `;
+})();
+</script>
     <title>
       MONOPOLY GO DICES 2026
     </title>
